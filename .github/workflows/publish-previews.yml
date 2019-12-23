@@ -1,0 +1,11 @@
+jobs:
+  job_name:
+    name: Job Name
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Publish PR Preview
+      uses: thefrontside/actions/publish-pr-preview@v1.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NPM_TOKEN: ${{ secrets.FRONTSIDEJACK_NPM_TOKEN }}
