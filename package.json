@@ -16,6 +16,7 @@
     "lerna": "^3.19.0"
   },
   "scripts": {
-    "build": "lerna run build"
+    "build": "lerna run build",
+    "test": "lerna run test"
   }
 }
