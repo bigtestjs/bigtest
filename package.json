@@ -11,5 +11,11 @@
     "packages": [
       "packages/*"
     ]
+  },
+  "dependencies": {
+    "lerna": "^3.19.0"
+  },
+  "scripts": {
+    "build": "lerna run build"
   }
 }
