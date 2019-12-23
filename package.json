@@ -12,9 +12,6 @@
       "packages/*"
     ]
   },
-  "dependencies": {
-    "lerna": "^3.19.0"
-  },
   "scripts": {
     "build": "yarn workspaces run build",
     "test": "yarn workspaces run test"
