@@ -4,7 +4,6 @@
   "version": "0.2.2",
   "license": "MIT",
   "main": "dist",
-  "private": true,
   "files": [
     "index.js",
     "dist",

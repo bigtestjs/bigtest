@@ -16,7 +16,7 @@
     "lerna": "^3.19.0"
   },
   "scripts": {
-    "build": "lerna run build",
-    "test": "lerna run test"
+    "build": "yarn workspaces run build",
+    "test": "yarn workspaces run test"
   }
 }
