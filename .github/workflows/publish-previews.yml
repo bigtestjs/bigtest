@@ -1,6 +1,11 @@
+on:
+  pull_request:
+    branches:
+      - master
+
 jobs:
   job_name:
-    name: Job Name
+    name: Publish preview package
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
