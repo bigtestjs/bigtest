@@ -1,0 +1,15 @@
+{
+  "name": "bigtest",
+  "version": "0.0.0-monorepo",
+  "description": "Tests that speed up development ",
+  "main": "index.js",
+  "repository": "git@github.com:bigtestjs/bigtest.git",
+  "author": "Taras Mankovski <taras@frontside.io>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  }
+}
