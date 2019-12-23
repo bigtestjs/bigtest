@@ -23,7 +23,6 @@
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/register": "^7.0.0",
-    "@bigtest/meta": "bigtestjs/meta",
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
     "eslint": "^4.16.0",
@@ -34,6 +33,11 @@
     "eslint-plugin-standard": "^3.0.1",
     "mocha": "~6.2.2",
     "rollup": "^0.53.0",
-    "rollup-plugin-babel": "^4.0.0"
+    "rollup-plugin-babel": "^4.0.0",
+    "semver": "^7.1.1",
+    "@babel/types": "^7.7.4",
+    "js-levenshtein": "^1.1.6",
+    "browserslist": "^4.8.2",
+    "@babel/helper-plugin-utils": "^7.0.0"
   }
 }
