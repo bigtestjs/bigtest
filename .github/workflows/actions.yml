@@ -15,4 +15,6 @@ jobs:
           node-version: '12.x'
       - run: yarn
       - run: yarn build
-      - run: xvfb-run yarn test --browser chrome
+      - run: yarn workspace @bigtest/cli run test
+      - run: yarn workspace @bigtest/convergence run test
+      - run: xvfb-run yarn workspace @bigtest/interactor run --browser chrome
