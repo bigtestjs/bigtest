@@ -16,7 +16,6 @@
     "build:cli": "babel --out-dir ./dist ./lib --verbose",
     "build:assets": "webpack --config webpack.config.js",
     "lint": "eslint ./",
-    "postpublish": "bigtest-tag-version",
     "start": "nodemon --watch ./lib --exec 'yarn build'",
     "test": "mocha --opts ./tests/mocha.opts ./tests"
   },
@@ -47,7 +46,6 @@
     "@babel/polyfill": "^7.0.0-beta.0",
     "@babel/preset-env": "^7.0.0-beta.0",
     "@babel/register": "^7.0.0-beta.0",
-    "@bigtest/meta": "bigtestjs/meta",
     "babel-eslint": "^9.0.0-beta.0",
     "babel-loader": "^8.0.0-beta.0",
     "babel-plugin-module-resolver": "^3.1.1",
