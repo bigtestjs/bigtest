@@ -148,7 +148,7 @@ export default class Coordinator {
       // give browsers 10 seconds to connect
       await when(() => this.store.ready || (
         throw new Error('Launched browsers did not connect')
-      ), 20000);
+      ), 10000);
 
       // when ready, tests will start running
       this.log.debug('Starting tests...');
