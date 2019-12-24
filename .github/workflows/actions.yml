@@ -17,4 +17,4 @@ jobs:
       - run: yarn build
       - run: yarn workspace @bigtest/cli run test
       - run: yarn workspace @bigtest/convergence run test
-      - run: xvfb-run yarn workspace @bigtest/interactor run --browser chrome
+      - run: xvfb-run yarn workspace @bigtest/interactor run test --browser chrome
