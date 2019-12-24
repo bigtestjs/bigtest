@@ -1,6 +1,0 @@
-filename: CHANGELOG.md
-include:
-  - /^lib\//
-  - /^templates\//
-  - index.js
-  - package.json
