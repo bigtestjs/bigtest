@@ -16,7 +16,6 @@
     "build:cli": "babel --out-dir ./dist ./lib --verbose",
     "build:assets": "webpack --config webpack.config.js",
     "lint": "eslint ./",
-    "postpublish": "bigtest-tag-version",
     "start": "nodemon --watch ./lib --exec 'yarn build'",
     "test": "mocha --opts ./tests/mocha.opts ./tests"
   },
