@@ -28,6 +28,7 @@ export default class ChromeBrowser extends BaseBrowser {
   get arguments() {
     return [
       `--user-data-dir=${this.tmpdir}`,
+      '--headless',
       '--no-default-browser-check',
       '--no-first-run',
       '--disable-default-apps',
