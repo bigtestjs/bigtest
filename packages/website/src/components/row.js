@@ -3,26 +3,26 @@ import styled from 'styled-components';
 
 const RowContainer = styled.div`
   display: flex;
-  align-items: center;
+  align-items: ${ props => props.align === "initial" ? 'initial' : 'center'};
 `;
 
 const RowComponent = styled.div`
   margin-left: var(--space-half-vw);
 `;
 
-const Row = ({ className, children }) => {
+const Row = ({ align, children }) => {
   return (
-    <RowContainer className={className}>
+    <RowContainer align={align}>
       {children.map((x, i) => {
         if (i === 0) {
           return (
-            <div className={x.props.className} style={{ flex: x.props.flex }}>
+            <div style={{ flex: x.props.flex }}>
               {x.props.children}
             </div >
           );
         } else {
           return (
-            <RowComponent className={x.props.className} style={{ flex: x.props.flex }}>
+            <RowComponent style={{ flex: x.props.flex }}>
               {x.props.children}
             </RowComponent>
           );

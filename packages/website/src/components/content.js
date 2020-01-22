@@ -19,13 +19,11 @@ const ContentContainerBar = styled.section`
 
 Content.propTypes = {
   content: PropTypes.node,
-  className: PropTypes.string,
   children: PropTypes.node
 };
 
 export default function Content({
   children,
-  className,
   content = children,
   ...props
 }) {
@@ -33,18 +31,14 @@ export default function Content({
     return (
       <section style={{ display: "flex" }}>
         <CoolBar />
-        <ContentContainerBar
-          className={className}
-        >
+        <ContentContainerBar>
           {content}
         </ContentContainerBar>
       </section>
     );
   } else {
     return (
-      <ContentContainer
-        className={className}
-      >
+      <ContentContainer>
         {content}
       </ContentContainer>
     );

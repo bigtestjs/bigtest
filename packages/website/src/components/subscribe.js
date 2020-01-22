@@ -23,6 +23,19 @@ const Input = styled.input`
   border-color: ${props => props.disabled ? "silver" : "var(--input-border-color)"};
 `;
 
+const P1 = styled.p`
+  font-family: var(--font-sans-serif);
+  font-weight: 700;
+  color: var(--color-dark-blue);
+  margin-top: var(--space-triple);
+  font-size: var(--size-med-sm);
+`;
+
+const P2 = styled.p`
+  font-family: var(--font-sans-serif);
+  color: var(--color-dark-blue);
+`;
+
 function encode(data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -42,8 +55,6 @@ export default class Subscribe extends React.Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-
-
   handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
@@ -61,33 +72,36 @@ export default class Subscribe extends React.Component {
 
   render() {
     return (
-      <form
-        name="newsletter"
-        method="post"
-        style={{ display: "flex" }}
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        onSubmit={this.handleSubmit}
-      >
-        <input type="hidden" name="form-name" value="newsletter" />
-        <div hidden>
-          <label>
-            Don’t fill this out:{' '}
-            <input name="bot-field" onChange={this.handleChange} />
-          </label>
-        </div>
-        <Input
-          id="email"
-          name="email"
-          onChange={this.handleChange}
-          required={true}
-          type="email"
-          value={this.state.email}
-          placeholder={this.state.input ? "Your email has been successfully submitted!" : "Your email (we'll send max 1 email per month, no spam)"}
-          disabled={this.state.input}
-        />
-        <Button type="submit" disabled={this.state.input}>Subscribe</Button>
-      </form>
+      <div>
+        {this.props.bold ? <P1>{this.props.text}</P1> : <P2>{this.props.text}</P2>}
+        <form
+          name="newsletter"
+          method="post"
+          style={{ display: "flex" }}
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          onSubmit={this.handleSubmit}
+        >
+          <input type="hidden" name="form-name" value="newsletter" />
+          <div hidden>
+            <label>
+              Don’t fill this out:{' '}
+              <input name="bot-field" onChange={this.handleChange} />
+            </label>
+          </div>
+          <Input
+            id="email"
+            name="email"
+            onChange={this.handleChange}
+            required={true}
+            type="email"
+            value={this.state.email}
+            placeholder={this.state.input ? "Your email has been successfully submitted!" : "Your email (we'll send max 1 email per month, no spam)"}
+            disabled={this.state.input}
+          />
+          <Button type="submit" disabled={this.state.input}>Subscribe</Button>
+        </form>
+      </div>
     );
   };
 };
