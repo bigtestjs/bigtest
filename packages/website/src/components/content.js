@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import css from 'classnames';
 import styled from 'styled-components';
 
 import CoolBar from './coolbar.js';
@@ -35,8 +34,7 @@ export default function Content({
       <section style={{ display: "flex" }}>
         <CoolBar />
         <ContentContainerBar
-          className={css(className
-          )}
+          className={className}
         >
           {content}
         </ContentContainerBar>
@@ -45,8 +43,7 @@ export default function Content({
   } else {
     return (
       <ContentContainer
-        className={css(className
-        )}
+        className={className}
       >
         {content}
       </ContentContainer>

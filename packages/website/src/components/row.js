@@ -1,5 +1,4 @@
 import React from 'react';
-import css from 'classnames';
 import styled from 'styled-components';
 
 const RowContainer = styled.div`
@@ -13,17 +12,17 @@ const RowComponent = styled.div`
 
 const Row = ({ className, children }) => {
   return (
-    <RowContainer className={css(className)}>
+    <RowContainer className={className}>
       {children.map((x, i) => {
         if (i === 0) {
           return (
-            <div className={css(x.props.className)} style={{ flex: x.props.flex }}>
+            <div className={x.props.className} style={{ flex: x.props.flex }}>
               {x.props.children}
             </div >
           );
         } else {
           return (
-            <RowComponent className={css(x.props.className)} style={{ flex: x.props.flex }}>
+            <RowComponent className={x.props.className} style={{ flex: x.props.flex }}>
               {x.props.children}
             </RowComponent>
           );
