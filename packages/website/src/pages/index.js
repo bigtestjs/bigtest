@@ -7,7 +7,7 @@ import Layout from '../components/layout';
 import Row from '../components/row';
 import Subscribe from '../components/subscribe';
 
-import { SideBox, Contact, ContactItem, ContactIcon } from '../styles/landing';
+import { SideBox, Contact, ContactItem, ContactIcon } from '../styles/landing-page';
 
 import discord_icon from '../images/icons/discord.svg';
 import placeholder from '../images/frontside/bigtest-icon.svg';

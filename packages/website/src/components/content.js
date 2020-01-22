@@ -2,7 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import CoolBar from './coolbar.js';
+const CoolBar = styled.div`
+  min-height: 100%;
+  width: calc(var(--space-single)*.4);
+  background-color: var(--color-dark-blue);
+  flex-shrink: 0;
+`;
 
 const ContentContainer = styled.section`
   padding: var(--space-half-vw) var(--space-single-vw);
