@@ -1,31 +1,50 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import Content from '../components/content';
-import { H1, H2, H3, H4, P } from '../components/text';
+import { P } from '../components/text';
+import { H1, H2, H3, H4 } from '../components/heading';
 import Image from '../components/image';
 import Layout from '../components/layout';
 import Row from '../components/row';
 import Subscribe from '../components/subscribe';
 
-import { SideBox, Contact, ContactItem, ContactIcon } from '../styles/landing-page';
-
 import discord_icon from '../images/icons/discord.svg';
 import placeholder from '../images/frontside/bigtest-icon.svg';
-
 import tests_intro from '../images/landing/tests-intro.svg';
 import reusable from '../images/landing/reusable.svg';
 import user_experience from '../images/landing/user-experience.svg';
 
+const SideBox = styled.div`
+  background-color: var(--color-light-light-blue);
+  padding: var(--space-double);
+`;
+
+const Contact = styled.ul`
+  list-style: none;
+  margin-top: var(--space-one-half);
+  margin-left: 0;
+`;
+
+const ContactItem = styled.a`
+  display: flex;
+  text-decoration: none;
+  color: var(--color-dark-blue);
+  align-items: center;
+`;
+
+const ContactIcon = styled.img`
+  height: calc(var(--size-base)*2/1.75);
+  padding-right: var(--space-half);
+`;
 
 const IndexPage = () => (
   <Layout>
     <Content coolbar={true}>
       <Row>
         <div flex={2}>
-          <H1 bold={true}>
-            Tests that speed up development,
-          </H1>
           <H1>
+            <b>Tests that speed up development,</b><br />
             not the other way around
           </H1>
           <P>
