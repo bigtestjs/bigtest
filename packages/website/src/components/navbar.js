@@ -12,36 +12,36 @@ const NavbarContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--space-half-vw) var(--space-single-vw);  
+  padding: var(--space-half-vw) var(--space-single-vw);
 `;
 
-const NavbarLogo = styled(Link)`
+const NavbarLogoLink = styled(Link)`
   height: ${logo_height};
 `;
 
+const NavbarLogo = styled.img`
+  height: 100%;
+`;
+
 const NavbarMenu = styled.ul`
-  list-style: none;
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 0;
 `;
 
 const NavbarItem = styled.li`
   margin-left: calc(var(--space-half-vw)/2);
-  margin-bottom: 0;
+  height: 100%;
 `;
 
 const NavbarA = styled.a`
   color: var(--color-dark-blue);
-  text-decoration: none;
   font-weight: 600;
   font-size: var(--size-med-sm);
 `;
 
 // const NavbarLink = styled(Link)`
 //   color: var(--color-dark-blue);
-//   text-decoration: none;
 //   font-weight: 600;
 //   font-size: var(--size-med-sm);
 // `;
@@ -52,9 +52,9 @@ const NavbarIcon = styled.img`
 
 const Navbar = () => (
   <NavbarContainer>
-    <NavbarLogo to="/">
-      <img src={bigtest_logo} alt="BigTestJS" />
-    </NavbarLogo>
+    <NavbarLogoLink to="/">
+      <NavbarLogo src={bigtest_logo} alt="BigTestJS" />
+    </NavbarLogoLink>
     <NavbarMenu>
       {/* <NavbarItem>
         <NavbarLink to="">

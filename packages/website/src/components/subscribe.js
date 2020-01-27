@@ -8,7 +8,6 @@ const Button = styled.button`
   font-size: var(--size-med-sm);
   background: ${props => props.disabled ? "grey" : "var(--button-color)"};
   color: white;
-  border: none;
   font-weight: bold;
 `;
 
@@ -24,7 +23,6 @@ const Input = styled.input`
 `;
 
 const P1 = styled.p`
-  font-family: var(--font-sans-serif);
   font-weight: 700;
   color: var(--color-dark-blue);
   margin-top: var(--space-triple);
@@ -32,7 +30,6 @@ const P1 = styled.p`
 `;
 
 const P2 = styled.p`
-  font-family: var(--font-sans-serif);
   color: var(--color-dark-blue);
 `;
 

@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import Navbar from './navbar';
 import Footer from './footer';
 
-import GlobalStyles from '../styles/global.js';
+import GlobalStyles from '../theme/global.js';
 
 const Layout = ({ children }) => {
   return (

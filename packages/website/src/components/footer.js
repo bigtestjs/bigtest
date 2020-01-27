@@ -22,6 +22,7 @@ const FooterLink = styled(Link)`
 
 const FooterLogo = styled.img`
   padding-left: var(--space-half);
+  height: 100%;
 `;
 
 const FooterText = styled.div`

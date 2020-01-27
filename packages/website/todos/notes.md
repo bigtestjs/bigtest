@@ -3,6 +3,7 @@
 - setup email submission with lambda?
 - refactor with typescript
 - refactor "global" with theme similar to the setup in blueprint
+- `The icon(src/images/frontside/bigtest-icon.png) you provided to 'gatsby-plugin-manifest' is not square`
 
 # Notes
 - commented out 'API' in navbar for now until we finish docs

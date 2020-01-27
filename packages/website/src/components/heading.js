@@ -7,7 +7,6 @@ const H1 = styled.h1`
 `;
 
 const H2 = styled.h2`
-  font-weight: 600;
   color: ${props => {
     if (props.color === "light-blue") {
       return 'var(--color-light-blue)';
@@ -27,9 +26,7 @@ const H3 = styled.h3`
 
 const H4 = styled.h4`
   color: var(--color-dark-blue);
-  margin-top: ${props => props.marginTop ? `${props.marginTop}` : 'var(--space-single)'};
   margin-bottom: var(--space-half);
-  font-weight: 700;
 `;
 
 export { H1, H2, H3, H4 };
