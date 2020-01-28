@@ -3,11 +3,14 @@ import reset from 'styled-reset-advanced';
 
 const Global = createGlobalStyle`
   ${reset};
-  
+
   :root {
+    /* testing theme here */
+    background: ${({ theme }) => theme.colors.background};
+
     /* Font Stack */
     --font-sans-serif: "Proxima Nova", "Helvetica", sans-serif;
-    --font-serif: "Georgia", "Times", "Times New Roman", serif;
+    --font-serif: "Georgia", "Times", "Times New Roman", serif; 
 
     /* Brand Colors */
     --color-pink: #F74D7B;

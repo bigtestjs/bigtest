@@ -1,11 +1,17 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
+import { ThemeProvider } from 'styled-components';
 
 import Navbar from './navbar';
 import Footer from './footer';
 
-import GlobalStyles from '../theme/global.js';
+import GlobalTheme from '../theme/global';
+import { dark, light } from '../theme';
+
+// manually changing for now for development
+// should probably make themeprovider its own component and import it into layout
+const theme = 'light';
 
 const Layout = ({ children }) => {
   return (
@@ -27,10 +33,12 @@ const Layout = ({ children }) => {
             <title>{data.site.siteMetadata.title}</title>
             <meta name="description" content={data.site.siteMetadata.description} />
           </Helmet>
-          <GlobalStyles />
-          <Navbar siteTitle={data.site.siteMetadata.title} />
-          {children}
-          <Footer />
+          <ThemeProvider theme={theme === 'dark' ? dark : light}>
+            <GlobalTheme />
+            <Navbar siteTitle={data.site.siteMetadata.title} />
+            {children}
+            <Footer />
+          </ThemeProvider>
         </main>
       )}
     />
