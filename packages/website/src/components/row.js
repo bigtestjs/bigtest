@@ -16,13 +16,13 @@ const Row = ({ align, children }) => {
       {children.map((x, i) => {
         if (i === 0) {
           return (
-            <div style={{ flex: x.props.flex }}>
+            <div key={i} style={{ flex: x.props.flex }}>
               {x.props.children}
             </div >
           );
         } else {
           return (
-            <RowComponent style={{ flex: x.props.flex }}>
+            <RowComponent key={i} style={{ flex: x.props.flex }}>
               {x.props.children}
             </RowComponent>
           );

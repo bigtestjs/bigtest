@@ -1,9 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset-advanced';
+import theme from './base';
 
 const Global = createGlobalStyle`
   ${reset};
-
+  
   :root {
     /* testing theme here */
     background: ${({ theme }) => theme.colors.background};
@@ -103,16 +104,16 @@ const Global = createGlobalStyle`
   }
 
   h1 {
-    font-size: 2.25rem;
+    font-size: ${theme.fontSizes['xxxLarge']};
   }
   h2 {
-    font-size: 1.62671rem;
+    font-size: ${theme.fontSizes['xLarge']};
   }
   h3 {
-    font-size: 1.38316rem;
+    font-size: ${theme.fontSizes['large']};
   }
   h4 {
-    font-size: 1rem;
+    font-size: ${theme.fontSizes['medium']};
   }
   h1, h2, h3, h4, b, p {
     margin-bottom: 1.45rem;

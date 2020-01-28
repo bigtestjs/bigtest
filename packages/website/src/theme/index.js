@@ -3,12 +3,12 @@ import { ThemeProvider as StyledThemeProvider } from 'styled-components';
 
 import dark from './dark';
 import light from './light';
-import Global from './global';
+import GlobalTheme from './global';
 
+// manually changing for now for development
 const getBrowserTheme = () => {
-  const mql = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)') || undefined;
+  // const mql = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)')) || undefined;
 
-  // manually changing for now for development
   // return mql && mql.matches ? 'dark' : 'light';
   return 'light';
 };
@@ -16,7 +16,7 @@ const getBrowserTheme = () => {
 const ThemeProvider = ({ children }) => {
   return (
     <StyledThemeProvider theme={getBrowserTheme() === 'dark' ? dark : light}>
-      <Global />
+      <GlobalTheme />
       {children}
     </StyledThemeProvider>
   )

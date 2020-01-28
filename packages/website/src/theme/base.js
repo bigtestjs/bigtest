@@ -7,7 +7,7 @@ const theme = {
 		heading: '"URW_Din_CondBold", "Roboto", sans-serif',
 		monospace: 'Menlo, monospace',
 	},
-	fontSizes: [0.625, 0.75, 0.875, 1, 1.25, 1.5, 2, 2.5].map(n => n + 'rem'),
+	fontSizes: [0.625, 0.75, 0.875, 1, 1.38, 1.65, 2, 2.25].map(n => n + 'rem'),
 	fontWeights: {
 		body: 400,
 		heading: 400,
@@ -20,13 +20,13 @@ const theme = {
 	},
 	space: [0, 0.25, 0.5, 1, 2, 4, 8, 16].map(n => n + 'rem'),
 	colors: {
-		dingdong: '#F74D7B',
+		red: '#F74D7B',
 		dongding: '#E9F6FD'
 	}
 };
 
 const breakpointAliases = ['small', 'medium', 'large', 'xLarge'];
-theme.breakpoints.forEach((value, index) => {
+theme.breakpoints.forEach((_, index) => {
 	theme.breakpoints[breakpointAliases[index]] = theme.breakpoints[index];
 });
 
