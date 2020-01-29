@@ -1,8 +1,38 @@
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset-advanced';
-import theme from './base';
+import base from './base';
 
-const Global = createGlobalStyle`
+const LightTheme = {
+  ...base,
+  name: 'light',
+  colors: {
+    background: '#ffffff'
+  }
+  // light mode from frontside.io
+  // --body-bg: #fff;
+  // --body-color: #444;
+  // --body-color-faded: #888;
+  // --logo-wordmark-color: var(--color-dark-blue);
+}
+
+const DarkTheme = {
+  ...base,
+  name: 'dark',
+  colors: {
+    background: '#1e1e1e'
+  },
+  // dark mode from frontside.io
+  //   :root {
+  // 	--body-bg: #1e1e1e;
+  // 	--body-color: #fafafa;
+  // 	--body-color-faded: #aaa;
+  // 	--logo-wordmark-color: #fff;
+  // 	--color-dark-blue-darkable: #59d6fb;
+  // 	--input-color: #ffffff;
+  // }
+};
+
+const GlobalTheme = createGlobalStyle`
   ${reset};
   
   :root {
@@ -10,8 +40,8 @@ const Global = createGlobalStyle`
     background: ${({ theme }) => theme.colors.background};
 
     /* Font Stack */
-    --font-sans-serif: "Proxima Nova", "Helvetica", sans-serif;
-    --font-serif: "Georgia", "Times", "Times New Roman", serif; 
+    --font-sans-serif: ${base.fonts.monospace};
+    --font-serif: ${base.fonts.monospace}; 
 
     /* Brand Colors */
     --color-pink: #F74D7B;
@@ -90,30 +120,30 @@ const Global = createGlobalStyle`
   }
 
   /* Break Points */
-  @media(min-width: 768px) {
+  @media(min-width: ${base.breakpoints['medium']}) {
       :root {
       --size-scale: 1.2;
       --size-base: 1.25rem;
     }
   }
 
-  @media(min-width: 1024px) {
+  @media(min-width: ${base.breakpoints['large']}) {
       :root {
       --space-single-vw: 7.5vw;
     }
   }
 
   h1 {
-    font-size: ${theme.fontSizes['xxxLarge']};
+    font-size: ${base.fontSizes['xxxLarge']};
   }
   h2 {
-    font-size: ${theme.fontSizes['xLarge']};
+    font-size: ${base.fontSizes['xLarge']};
   }
   h3 {
-    font-size: ${theme.fontSizes['large']};
+    font-size: ${base.fontSizes['large']};
   }
   h4 {
-    font-size: ${theme.fontSizes['medium']};
+    font-size: ${base.fontSizes['medium']};
   }
   h1, h2, h3, h4, b, p {
     margin-bottom: 1.45rem;
@@ -123,4 +153,4 @@ const Global = createGlobalStyle`
   }
 `;
 
-export default Global;
+export { GlobalTheme, LightTheme, DarkTheme };

@@ -1,9 +1,7 @@
-// base copied over from resideo/blueprint
-
-const theme = {
-	breakpoints: [36, 48, 62, 75].map(n => n + 'rem'),
+const base = {
+	breakpoints: [36, 48, 64, 75].map(n => n + 'rem'),
 	fonts: {
-		body: '"Roboto", sans-serif',
+		body: 'serif',
 		heading: '"URW_Din_CondBold", "Roboto", sans-serif',
 		monospace: 'Menlo, monospace',
 	},
@@ -26,8 +24,8 @@ const theme = {
 };
 
 const breakpointAliases = ['small', 'medium', 'large', 'xLarge'];
-theme.breakpoints.forEach((_, index) => {
-	theme.breakpoints[breakpointAliases[index]] = theme.breakpoints[index];
+base.breakpoints.forEach((_, index) => {
+	base.breakpoints[breakpointAliases[index]] = base.breakpoints[index];
 });
 
 const sizeAliases = [
@@ -41,12 +39,12 @@ const sizeAliases = [
 	'xxxLarge',
 ];
 
-theme.fontSizes.forEach((_, index) => {
-	theme.fontSizes[sizeAliases[index]] = theme.fontSizes[index];
+base.fontSizes.forEach((_, index) => {
+	base.fontSizes[sizeAliases[index]] = base.fontSizes[index];
 });
 
-theme.space.forEach((_, index) => {
-	theme.space[sizeAliases[index]] = theme.space[index];
+base.space.forEach((_, index) => {
+	base.space[sizeAliases[index]] = base.space[index];
 });
 
-export default theme;
+export default base;
