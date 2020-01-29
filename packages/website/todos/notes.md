@@ -1,8 +1,6 @@
 # Todos
 - need the svg icons for reach out on the bottom of landing page (see png file in this folder)
-- setup email submission with lambda?
-- refactor with typescript
-- refactor "global" with theme similar to the setup in blueprint
+- setup email submission
 - `The icon(src/images/frontside/bigtest-icon.png) you provided to 'gatsby-plugin-manifest' is not square`
 
 # Notes
