@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const H1 = styled.h1`
-  color: var(--color-dark-blue);
+  color: var(--color-pink);
   font-weight: 200;
   line-height: var(--space-triple);
 `;

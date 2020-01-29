@@ -3,7 +3,6 @@ import reset from 'styled-reset-advanced';
 import base from './base';
 
 const LightTheme = {
-  ...base,
   name: 'light',
   colors: {
     background: '#ffffff'
@@ -16,13 +15,12 @@ const LightTheme = {
 }
 
 const DarkTheme = {
-  ...base,
   name: 'dark',
   colors: {
     background: '#1e1e1e'
   },
   // dark mode from frontside.io
-  //   :root {
+  // :root {
   // 	--body-bg: #1e1e1e;
   // 	--body-color: #fafafa;
   // 	--body-color-faded: #aaa;
@@ -35,10 +33,10 @@ const DarkTheme = {
 const GlobalTheme = createGlobalStyle`
   ${reset};
   
-  :root {
-    /* testing theme here */
-    background: ${({ theme }) => theme.colors.background};
+  /* testing theme here */
+  background: ${({ theme }) => theme.colors.background};
 
+  :root {
     /* Font Stack */
     --font-sans-serif: ${base.fonts.monospace};
     --font-serif: ${base.fonts.monospace}; 
