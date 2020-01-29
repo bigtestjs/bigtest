@@ -1,32 +1,41 @@
 import styled from 'styled-components';
 
 const H1 = styled.h1`
-  color: var(--color-pink);
-  font-weight: 200;
-  line-height: var(--space-triple);
+  font-family: ${({ theme }) => theme.fonts.heading};
+  color: ${({ theme }) => theme.colors.primary};
+  font-weight: ${({ theme }) => theme.fontWeights.light};
+  font-size: ${({ theme }) => theme.fontSizes.xxxLarge};
+  line-height: ${({ theme }) => theme.lineHeights.heading};
+  margin-bottom: ${({ theme }) => theme.space.large};
 `;
 
 const H2 = styled.h2`
-  color: ${props => {
-    if (props.color === "light-blue") {
-      return 'var(--color-light-blue)';
-    } else if (props.color === "dark-blue") {
-      return 'var(--color-dark-blue)';
-    } else if (props.color === "pink") {
-      return 'var(--color-pink)';
-    } else {
-      return 'var(--input-color)';
-    }
-  }};
+  color: ${({ color, theme }) => ((color) ? theme.colors[color] : theme.colors.primary)};
+  font-family: ${({ theme }) => theme.fonts.heading};
+  font-weight: ${({ theme }) => theme.fontWeights.body};
+  font-size: ${({ theme }) => theme.fontSizes.xLarge};
+  line-height: ${({ theme }) => theme.lineHeights.heading};
+  margin-bottom: ${({ theme }) => theme.space.large};
 `;
 
 const H3 = styled.h3`
-  color: var(--color-light-blue);
+  color: ${({ color, theme }) => (color) ? theme.colors[color] : theme.colors.primary};
+  font-family: ${({ theme }) => theme.fonts.heading};
+  font-weight: ${({ theme }) => theme.fontWeights.bold};
+  font-size: ${({ theme }) => theme.fontSizes.medium};
+  line-height: ${({ theme }) => theme.lineHeights.heading};
+  margin-bottom: ${({ theme }) => theme.space.medium};
 `;
 
 const H4 = styled.h4`
-  color: var(--color-dark-blue);
-  margin-bottom: var(--space-half);
+  color: ${({ color, theme }) => (color) ? theme.colors[color] : theme.colors.primary};
+  font-family: ${({ theme }) => theme.fonts.heading};
+  font-weight: ${({ theme }) => theme.fontWeights.bold};
+  font-size: ${({ theme }) => theme.fontSizes.small};
+  line-height: ${({ theme }) => theme.lineHeights.heading};
+  margin-bottom: ${({ theme }) => theme.space.small};
+  text-transform: uppercase;
+  letter-spacing: 1px;
 `;
 
 export { H1, H2, H3, H4 };

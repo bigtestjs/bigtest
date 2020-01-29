@@ -1,26 +1,21 @@
 const base = {
-	breakpoints: [36, 48, 64, 75].map(n => n + 'rem'),
+  breakpoints: [36, 48, 64, 75].map(n => n + 'rem'),
 	fonts: {
-		body: 'serif',
-		heading: '"URW_Din_CondBold", "Roboto", sans-serif',
-		monospace: 'Menlo, monospace',
+		body: '"Fright Text Pro", freight-text-pro, serif',
+		heading: '"Proxima Nova", proxima-nova, sans-serif',
+		monospace: 'monospace',
 	},
 	fontSizes: [0.625, 0.75, 0.875, 1, 1.38, 1.65, 2, 2.25].map(n => n + 'rem'),
 	fontWeights: {
+		light: 300,
 		body: 400,
-		heading: 400,
-		medium: 500,
 		bold: 700,
 	},
 	lineHeights: {
 		body: 1.5,
 		heading: 1.25,
 	},
-	space: [0, 0.25, 0.5, 1, 2, 4, 8, 16].map(n => n + 'rem'),
-	colors: {
-		red: '#F74D7B',
-		dongding: '#E9F6FD'
-	}
+  space: [0, 0.25, 0.5, 1, 2, 4, 8, 16].map(n => n + 'rem'),
 };
 
 const breakpointAliases = ['small', 'medium', 'large', 'xLarge'];

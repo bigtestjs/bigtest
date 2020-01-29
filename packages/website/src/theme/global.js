@@ -2,39 +2,51 @@ import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset-advanced';
 import base from './base';
 
+const brand = {
+  pink: '#f74d7b',
+  skyBlue: '#26abe8',
+  darkBlue: '#14315d',
+}
+
 const LightTheme = {
+  ...base,
   name: 'light',
   colors: {
-    background: '#ffffff'
-  }
-  // light mode from frontside.io
-  // --body-bg: #fff;
-  // --body-color: #444;
-  // --body-color-faded: #888;
-  // --logo-wordmark-color: var(--color-dark-blue);
+    brand,
+    background: '#ffffff',
+    bodyCopy: '#1a1a1a',
+    primary: brand.darkBlue,
+    secondary: brand.skyBlue,
+    contrast: brand.pink,
+  },
 }
 
 const DarkTheme = {
+  ...base,
   name: 'dark',
   colors: {
-    background: '#1e1e1e'
+    brand,
+    background: '#14191e',
+    bodyCopy: '#b3b3b3',
+    primary: '#ffffff',
+    secondary: brand.skyBlue,
+    contrast: brand.pink,
   },
-  // dark mode from frontside.io
-  // :root {
-  // 	--body-bg: #1e1e1e;
-  // 	--body-color: #fafafa;
-  // 	--body-color-faded: #aaa;
-  // 	--logo-wordmark-color: #fff;
-  // 	--color-dark-blue-darkable: #59d6fb;
-  // 	--input-color: #ffffff;
-  // }
 };
 
 const GlobalTheme = createGlobalStyle`
   ${reset};
-  
-  /* testing theme here */
-  background: ${({ theme }) => theme.colors.background};
+
+  body {
+    background: ${({ theme }) => theme.colors.background};
+    font-family: ${({ theme }) => theme.fonts.body};
+    font-size: 20px;
+    line-height: ${({ theme }) => theme.lineHeights.body};
+  }
+
+  img {
+    max-width: 100%;
+  }
 
   :root {
     /* Font Stack */
@@ -115,39 +127,6 @@ const GlobalTheme = createGlobalStyle`
       var(--size-scale) /
       var(--size-scale) /
       var(--size-scale));
-  }
-
-  /* Break Points */
-  @media(min-width: ${base.breakpoints['medium']}) {
-      :root {
-      --size-scale: 1.2;
-      --size-base: 1.25rem;
-    }
-  }
-
-  @media(min-width: ${base.breakpoints['large']}) {
-      :root {
-      --space-single-vw: 7.5vw;
-    }
-  }
-
-  h1 {
-    font-size: ${base.fontSizes['xxxLarge']};
-  }
-  h2 {
-    font-size: ${base.fontSizes['xLarge']};
-  }
-  h3 {
-    font-size: ${base.fontSizes['large']};
-  }
-  h4 {
-    font-size: ${base.fontSizes['medium']};
-  }
-  h1, h2, h3, h4, b, p {
-    margin-bottom: 1.45rem;
-  }
-  h1, h2, h3, h4, b {
-    font-weight: bold;
   }
 `;
 
