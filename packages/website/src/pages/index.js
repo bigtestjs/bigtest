@@ -7,7 +7,7 @@ import Box from '../components/Box';
 import Hero from '../components/Hero';
 import { H1, H2, H3, H4 } from '../components/heading';
 import Image from '../components/Image';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import Text, { Strong } from '../components/Text';
 import Subscribe from '../components/subscribe';
 import WhyBigTest from '../components/WhyBigTest';
@@ -38,7 +38,7 @@ const IndexPage = () => (
   <Layout>
     <Hero>
       <Flex alignItems='center' flexWrap='wrap'>
-        <Box width={[1, 1/2, 2/3]} paddingRight={[0, 'large', 'xLarge']}>
+        <Box width={[1, 1 / 2, 2 / 3]} paddingRight={[0, 'large', 'xLarge']}>
           <H1>
             <Strong>Tests that speed up development,</Strong><br />
             not the other way around
@@ -49,7 +49,7 @@ const IndexPage = () => (
           <Subscribe text="Get notified about BigTest progress and know when it's ready:" bold={true} />
         </Box>
         <Image
-          width={[1, 1/2, 1/3]}
+          width={[1, 1 / 2, 1 / 3]}
           paddingX={['xLarge', 'small', 'large']}
           marginTop={['large', 0, 0]}
           src={tests_intro}
@@ -60,7 +60,7 @@ const IndexPage = () => (
     <WhyBigTest />
     <Section>
       <Flex flexWrap='wrap'>
-        <Box width={[1, 1/2, 2/3]} paddingRight={[0, 'medium', 'xLarge']}>
+        <Box width={[1, 1 / 2, 2 / 3]} paddingRight={[0, 'medium', 'xLarge']}>
           <H2 color='contrast'>
             Are you testing code or actual user experiences?
           </H2>
@@ -72,7 +72,7 @@ const IndexPage = () => (
           </Text>
         </Box>
         <Image
-          width={[1, 1/2, 1/3]}
+          width={[1, 1 / 2, 1 / 3]}
           paddingX={['xLarge', 'large', 'xLarge']}
           marginTop={['large', 0, 0]}
           src={user_experience}
@@ -82,7 +82,7 @@ const IndexPage = () => (
     </Section>
     <Section>
       <Flex>
-        <Box width={[1, 1/2, 2/3]} paddingRight={[0, 'medium', 'xLarge']}>
+        <Box width={[1, 1 / 2, 2 / 3]} paddingRight={[0, 'medium', 'xLarge']}>
           <H2>
             Seriously fast testing
           </H2>
@@ -93,7 +93,7 @@ const IndexPage = () => (
             BigTest cuts through the noise with a process we call <i>convergences</i>. Convergences are immutable, reusable, and composable assertions that allow you to know immediately when the desired state is achieved. In other words, BigTest checks the DOM every 10ms to verify that an assertion is true, so tests pass at the soonest possible point. This adds up to a test suite that outperforms all alternatives.
           </Text>
         </Box>
-        <Box width={[1, 1/2, 1/3]}>
+        <Box width={[1, 1 / 2, 1 / 3]}>
           <SideBox>
             <H3>
               Flexible &amp; framework agnostic
@@ -107,7 +107,7 @@ const IndexPage = () => (
     </Section>
     <Section>
       <Flex>
-        <Box width={[1, 1/2, 2/3]} paddingRight='large'>
+        <Box width={[1, 1 / 2, 2 / 3]} paddingRight='large'>
           <H2 color="secondary">
             BigTest makes your tests reusable
           </H2>
@@ -119,7 +119,7 @@ const IndexPage = () => (
           </Text>
         </Box>
         <Image
-          width={[1, 1/2, 1/3]}
+          width={[1, 1 / 2, 1 / 3]}
           paddingX={['xLarge', 'large', 'xLarge']}
           marginTop={['large', 0, 0]}
           src={reusable}
