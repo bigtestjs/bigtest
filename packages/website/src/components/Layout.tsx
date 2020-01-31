@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
 import ThemeProvider from '../theme';
-import Navbar from './Navbar';
+const Navbar = require('./Navbar');
 import Footer from './Footer';
 
 const Layout = ({ children }) => {
